@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/Css/stylejdmr.css}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Resta</title>
+  </head>
+  <body>
+    <div class="row" id="contenedor">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="card">
+            <div class="card-body row">
+              <div class="col-md-12 row" id="divform">
+                <form
+                  class="row col-md-12"
+                  th:action="@{/calculadora/resta}"
+                  method="post"
+                >
+                  <h4 class="card-text">Resta</h4>
+
+                  <label class="form-label col-md-12">Numero 1</label>
+                  <input
+                    class="col-md-12"
+                    type="number"
+                    name="num1"
+                    th:value="${num1}"
+                  />
+
+                  <label class="form-label col-md-12">Numero 2</label>
+                  <input
+                    class="col-md-12"
+                    type="number"
+                    name="num2"
+                    th:value="${num2}"
+                  />
+
+                  <label class="form-label col-md-12">Resultado</label>
+                  <input
+                    class="col-md-12"
+                    type="number"
+                    name="result"
+                    th:value="${result}"
+                    disabled
+                  />
+
+                  <button
+                    type="submit"
+                    style="margin-right: 20px"
+                    class="btn col-md-3"
+                    id="boton"
+                  >
+                    Calcular
+                  </button>
+                  <button type="button" class="btn col-md-3" id="boton2" onclick="clearFields()">Limpiar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function clearFields() {
+            document.querySelector('input[name="num1"]').value = 0;
+            document.querySelector('input[name="num2"]').value = 0;
+            document.querySelector('input[name="result"]').value = 0;
+        }
+    </script>
+  </body>
+</html>

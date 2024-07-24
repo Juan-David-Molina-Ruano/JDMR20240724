@@ -1,0 +1,32 @@
+#contenedor {
+  margin-top: 150px;
+}
+
+#h1resta {
+  text-align: center;
+}
+
+#divform {
+  border: 1px solid;
+  margin-left: 0.3px;
+  background: rgb(34,40,195);
+  background: linear-gradient(0deg, rgba(34,40,195,1) 0%, rgba(19,227,244,1) 50%);
+}
+
+#boton{
+    background-color: #0baeeb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#boton2{
+  background-color: #0baeeb;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+form h4{
+    border-bottom: 1px solid;
+}
